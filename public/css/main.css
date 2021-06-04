@@ -1,0 +1,8 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1D1A51;
+  background-image: linear-gradient(to bottom right, #1D1A51, #3B982D);
+  background-repeat: no-repeat;
+  color: whitesmoke;
+  height: 100%;
+}
