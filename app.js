@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const config = require('./config.json');
+const port = process.env.PORT || config['server.port'];
 const urlsManager = require('./urls/urlsManager');
 
 app.use(express.static('public'));

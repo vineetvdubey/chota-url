@@ -1,3 +1,5 @@
+const config = require('../config.json');
+
 const { nanoid } = require('nanoid');
 
 const urlsStore = {
@@ -7,7 +9,7 @@ const urlsStore = {
 };
 
 //TODO: Move configurable values to properties file
-const hostAddress = 'http://localhost:3000';
+const hostAddress = config['server.address'];
 const shortUrlIdSize = 8;
 
 const resObject = (shortUrl, longUrl) => {
@@ -18,7 +20,7 @@ const resObject = (shortUrl, longUrl) => {
 };
 
 const getAllUrls = () => {
-  Object.keys(urlsStore).map((key) => {
+  return Object.keys(urlsStore).map((key) => {
     return { shortUrlId: key, ...resObject(getShortUrl(key), urlsStore[key]) };
   });
 };

@@ -1,0 +1,4 @@
+{
+  "server.port": 3000,
+  "server.address": "https://ch-url.herokuapp.com/"
+}
