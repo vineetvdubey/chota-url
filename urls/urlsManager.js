@@ -7,7 +7,7 @@ const urlsStore = {
 };
 
 //TODO: Move configurable values to properties file
-const redirectPrefix = 'http://localhost:3000';
+const hostAddress = 'http://localhost:3000';
 const shortUrlIdSize = 8;
 
 const resObject = (shortUrl, longUrl) => {
@@ -24,7 +24,7 @@ const getAllUrls = () => {
 };
 
 const getShortUrl = (shortUrlId) => {
-  return `${redirectPrefix}/${shortUrlId}`;
+  return `${hostAddress}/${shortUrlId}`;
 };
 
 const getLongUrl = (shortUrlId) => {
