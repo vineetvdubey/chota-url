@@ -4,6 +4,7 @@
   "description": "A URL shortening app with backend in NodeJS + express.js and frontend with vanilla html/css/js",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,7 +12,7 @@
     "url": "git+https://github.com/vineetvdubey/chota-url.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "vineetvdubey",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vineetvdubey/chota-url/issues"
