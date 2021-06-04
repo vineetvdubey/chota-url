@@ -3,12 +3,12 @@ const router = express.Router();
 const urlsManager = require('./urlsManager');
 
 router.get('/', (req, res) => {
-  res.send(urlsManager.urlsStore);
+  res.send(urlsManager.getAllUrls());
 });
 
 router.get('/:shortUrlId', (req, res) => {
   const shortUrlId = req.params.shortUrlId;
-  const longUrl = urlsManager.urlsStore[shortUrlId];
+  const longUrl = urlsManager.getLongUrl(shortUrlId);
   if (longUrl) {
     const shortUrl = urlsManager.getShortUrl(shortUrlId);
     res.send(urlsManager.resObject(shortUrl, longUrl));

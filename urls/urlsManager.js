@@ -1,8 +1,9 @@
 const { nanoid } = require('nanoid');
 
 const urlsStore = {
-  '9009l3': 'https://www.google.com',
-  '4m4z0n': 'https://www.amazon.in',
+  '7r2RFMa4e': 'https://workat.tech/backend-development/tutorial/designing-apis-basics-l64bq1id8gew',
+  '4zmd_3mdT': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects',
+  '1bTAkrd2_': 'https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html',
 };
 
 //TODO: Move configurable values to properties file
@@ -14,6 +15,12 @@ const resObject = (shortUrl, longUrl) => {
     shortUrl: shortUrl,
     longUrl: longUrl,
   };
+};
+
+const getAllUrls = () => {
+  Object.keys(urlsStore).map((key) => {
+    return { shortUrlId: key, ...resObject(getShortUrl(key), urlsStore[key]) };
+  });
 };
 
 const getShortUrl = (shortUrlId) => {
@@ -30,4 +37,4 @@ const createShortUrl = (longUrl) => {
   return resObject(getShortUrl(shortUrlId), longUrl);
 };
 
-module.exports = { urlsStore, resObject, getShortUrl, getLongUrl, createShortUrl };
+module.exports = { getAllUrls, resObject, getShortUrl, getLongUrl, createShortUrl };
