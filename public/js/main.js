@@ -18,11 +18,22 @@ window.onload = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        shortUrlOutput.value = json.shortUrl;
+        shortUrlOutput.innerHTML = json.shortUrl;
+        shortenUrlButton.disabled = false;
       });
   };
 
+  longUrlInput.addEventListener('keyup', (event, x) => {
+    shortUrlOutput.innerHTML = '';
+    if (event.target.value.length > 0) {
+      shortenUrlButton.disabled = false;
+    } else {
+      shortenUrlButton.disabled = true;
+    }
+  });
+
   shortenUrlButton.addEventListener('click', () => {
+    shortenUrlButton.disabled = true;
     let inputLongUrl = longUrlInput.value;
     if (!inputLongUrl.startsWith('http')) {
       inputLongUrl = `https://${inputLongUrl}`;
