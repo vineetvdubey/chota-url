@@ -1,0 +1,23 @@
+{
+  "name": "chota-url",
+  "version": "1.0.0",
+  "description": "A URL shortening app with backend in NodeJS + express.js and frontend with vanilla html/css/js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vineetvdubey/chota-url.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vineetvdubey/chota-url/issues"
+  },
+  "homepage": "https://github.com/vineetvdubey/chota-url#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
