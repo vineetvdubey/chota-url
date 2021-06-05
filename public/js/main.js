@@ -95,9 +95,7 @@ window.onload = () => {
 
   resultDiv.addEventListener('click', () => {
     if (allowCopyResult) {
-      shortUrlOutput.select();
-      document.execCommand('copy');
-      showCopiedMessage();
+      navigator.clipboard.writeText(shortUrlOutput.value).then(() => showCopiedMessage());
     }
   });
 };
