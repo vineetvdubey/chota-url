@@ -8,6 +8,16 @@ html {
   text-align: center;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+.sub-title {
+  font-size: 0.5em;
+  font-weight: 300;
+  font-style: italic;
+}
+
 textarea {
   border-style: none;
   border-color: transparent;
