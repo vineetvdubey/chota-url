@@ -2,7 +2,8 @@ html {
   font-family: 'Roboto', sans-serif;
   background-color: #1d1a51;
   background-image: linear-gradient(to bottom right, #1d1a51, #3b982d);
-  background-repeat: round;
+  background-attachment: fixed;
+  height: 100%;
   color: whitesmoke;
   height: 100%;
   text-align: center;
