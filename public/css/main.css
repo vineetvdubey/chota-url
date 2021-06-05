@@ -2,7 +2,7 @@ html {
   font-family: 'Roboto', sans-serif;
   background-color: #1d1a51;
   background-image: linear-gradient(to bottom right, #1d1a51, #3b982d);
-  background-repeat: no-repeat;
+  background-repeat: round;
   color: whitesmoke;
   height: 100%;
   text-align: center;
@@ -17,6 +17,8 @@ h1 {
   border-color: black;
   background-color: black;
   height: 2px;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 
 .sub-title {
@@ -110,6 +112,44 @@ h1 {
   position: fixed;
   bottom: 20px;
   text-align: center;
+}
+
+a[target='_blank']::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0px 3px 0px 5px;
+}
+
+.recent-link {
+  font-size: 1.25em;
+  color: black;
+}
+
+#recent-section {
+  margin: 3em;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 10px 40px;
+}
+
+thead {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: black;
+}
+
+td a {
+  color: black;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 500px) {
