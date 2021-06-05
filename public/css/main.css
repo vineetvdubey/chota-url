@@ -12,36 +12,96 @@ h1 {
   font-size: 3em;
 }
 
+#hrule {
+  width: 75vw;
+  border-color: black;
+  background-color: black;
+  height: 2px;
+}
+
 .sub-title {
   font-size: 0.5em;
   font-weight: 300;
   font-style: italic;
 }
 
-textarea {
-  border-style: none;
-  border-color: transparent;
-  overflow: hidden;
-  resize: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.input-div {
+  display: inline-block;
+  border: 1px solid black;
+  width: 75vw;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.short-res-style {
+.output-div {
+  display: inline-block;
+  border: 1px solid black;
+  width: 50vw;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+}
+
+#shorten,
+.short-url-style,
+.long-url-style {
+  margin: 0;
+  padding: 0;
+  height: 3em;
+  border: none;
+  font-size: 1.25em;
+}
+
+.short-url-style {
+  background-color: whitesmoke;
+  width: 100%;
   text-align: center;
-  font-weight: 500;
+  border-radius: 10px;
+  color: #1d1a51;
+  font-weight: bold;
 }
 
-.shorten-btn {
-  display: block;
-  padding: 20px;
-  margin: 20px auto;
+.long-url-style {
+  width: 80%;
+  text-indent: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: whitesmoke;
+  color: #1d1a51;
 }
 
-.shorten-btn:disabled {
-  color: #444;
-  background-color: grey;
+#shorten {
+  width: 20%;
+  background-color: #122335;
+  color: whitesmoke;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#shorten:disabled {
+  color: #999;
+}
+
+.long-url-style:focus {
+  outline: none;
+}
+
+.short-url-style:focus {
+  outline: none;
+}
+
+.copy-style {
+  font-size: 1.4em;
+  font-weight: bolder;
+  color: black;
+}
+
+.hidden {
+  display: none;
 }
 
 #footer {
@@ -52,12 +112,25 @@ textarea {
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+  .input-div {
+    width: 90vw;
+  }
+
+  .output-div {
+    width: 95vw;
+  }
+
+  .long-url-style {
+    width: 70%;
+  }
+
+  #shorten {
+    width: 30%;
+  }
+
   #footer {
     /* position: unset; */
     margin-top: 20px;
-  }
-  textarea {
-    width: 80vw;
   }
 }

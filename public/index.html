@@ -16,11 +16,17 @@
 <body>
   <header>
     <h1>Chota&nbsp;URL <span class="sub-title">Shorten&nbsp;your&nbsp;URLs</span></h1>
+    <hr id="hrule" />
   </header>
   <main>
-    <textarea id="long-url" cols="50" rows="6" placeholder="Type (or paste) some really looooooong url...."></textarea>
-    <input id="shorten" type="button" value="Shorten URL" class="shorten-btn " disabled="true">
-    <div><span id="short-url" class="short-res-style"></span></div>
+    <div class="input-div">
+      <input id="long-url" type="text" placeholder="Paste a long url..." class="long-url-style"><input id="shorten" type="button"
+        value="Shorten" disabled="true">
+    </div>
+    <div id="result" class="output-div hidden">
+      <input id="short-url" type="text" value="Try it now!" class="short-url-style" readonly>
+    </div>
+    <div class="copy-style"></div>
   </main>
   <footer id="footer">
     <small>★ Created by Vineet Dubey ★</small>
