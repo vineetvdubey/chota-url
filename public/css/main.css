@@ -32,7 +32,7 @@ h1 {
   display: inline-block;
   border: 1px solid black;
   width: 75vw;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 2em;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -98,6 +98,7 @@ h1 {
 }
 
 .copy-style {
+  margin-top: 10px;
   font-size: 1.4em;
   font-weight: bolder;
   color: black;
@@ -126,7 +127,7 @@ a[target='_blank']::after {
 }
 
 #recent-section {
-  margin: 3em;
+  margin: 2em;
 }
 
 table {
@@ -172,7 +173,7 @@ td a {
   }
 
   #footer {
-    /* position: unset; */
+    position: absolute;
     margin-top: 20px;
   }
 }
