@@ -4,7 +4,14 @@ window.onload = () => {
   const getAllUrls = () => {
     fetch(`${apiHost}/urls`)
       .then((res) => res.json())
-      .then((json) => createTable(json));
+      .then((json) => createTable(json))
+      .catch(() => tableErrorMessage());
+  };
+
+  const tableErrorMessage = () => {
+    const para = document.createElement('p');
+    document.querySelector('#table-div').appendChild(para);
+    para.innerHTML = 'Server Error - Unable to fetch recent data.<br>Please try again later.'
   };
 
   const createTable = (jsonObj) => {
