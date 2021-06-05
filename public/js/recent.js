@@ -10,12 +10,10 @@ window.onload = () => {
   const createTable = (jsonObj) => {
     const table = document.createElement('table');
     document.querySelector('#table-div').appendChild(table);
-
     const header = table.createTHead();
     const thead = header.insertRow();
-    thead.insertCell().innerText = 'Original Long URL';
-    thead.insertCell().innerText = 'Shortened URL';
-
+    thead.insertCell().innerHTML = 'Original Long&nbsp;URL';
+    thead.insertCell().innerHTML = 'Shortened URL';
     const tbody = table.createTBody();
     jsonObj
       .reverse()
